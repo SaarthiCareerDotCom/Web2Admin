@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="./global.css">
+
+</head>
+<body>
+<div class="admin-panel clearfix">
+  <div class="slidebar">
+    <div class="logo">
+      <a href=""></a>
+    </div>
+    <ul>
+      <li><a href="#dashboard" id="targeted">dashboard</a></li>
+      <li><a href="#posts">Courses</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#pages">pages</a></li>
+  </div>
+  <div class="main">
+    <ul class="topbar clearfix">
+      <li><a href="#">q</a></li>
+      <li><a href="#">p</a></li>
+      <li><a href="#">o</a></li>
+      <li><a href="#">f</a></li>
+      <li><a href="#">n</a></li>
+    </ul>
+    <div class="mainContent clearfix">
+      <div id="dashboard">
+        <h2 class="header"><span class="icon"></span>Dashboard</h2>
+         <div class="quick-press">
+           <h4>Quick Press</h4>
+           <form action="" method="post">
+             <input type="text" name="title" placeholder="Title"/>
+             <input type="text" name="content" placeholder="Content"/>
+             <input type="text" name="tags" placeholder="Tags"/>
+             <button type="button" class="save">l</button>
+             <button type="button" class="delet">m</button>
+             <button type="submit" class="submit" name="submit">Publish</button>
+           </form>
+         </div>
+       </div>
+       <div id="posts">
+         <h2 class="header">Courses</h2>
+       </div>
+       <div id="notifications">
+         <button type="button" onClick="">Course1</button>
+         <h2 class="header">Notifications</h2>
+         <textarea id="myTxt" rows="4" cols="50"></textarea>
+         <p id="demo">JJ</p>
+         <button type="button" onClick="myFunction()">SEND</button>
+       </div>
+       <div id="pages">
+         <h2 class="header">pages</h2>
+       </div>
+       <div id="links">
+         <h2 class="header">links</h2>
+       </div>
+       <div id="comments">
+         <h2 class="header">comments</h2>
+       </div>
+       <div id="widgets">
+         <h2 class="header">widgets</h2>
+       </div>
+       <div id="plugins">
+         <h2 class="header">plugins</h2>
+       </div>
+       <div id="users">
+         <h2 class="header">users</h2>
+       </div>
+       <div id="tools">
+         <h2 class="header">tools</h2>
+       </div>
+       <div id="settings">
+         <h2 class="header">settings</h2>
+       </div>
+     </div>
+     <ul class="statusbar">
+       <li><a href=""></a></li>
+       <li><a href=""></a></li>
+       <li class="profiles-setting"><a href="">s</a></li>
+       <li class="logout"><a href="">k</a></li>
+     </ul>
+   </div>
+</div>
+
+ <!-- <script src="/__/firebase/4.1.2/firebase-app.js"></script>
+ <script src="/__/firebase/4.1.2/firebase-auth.js"></script>
+ <script src="/__/firebase/4.1.2/firebase-database.js"></script>
+ <script src="/__/firebase/4.1.2/firebase-messaging.js"></script>
+ <script src="/__/firebase/init.js"></script> -->
+ <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
+<script>
+ function myFunction() {
+   var config = {
+       apiKey: "AIzaSyA93riPKRmRemS6pM9nk7G5zQnMyfHT-1Q",
+       authDomain: "auth-62369.firebaseapp.com",
+       databaseURL: "https://auth-62369.firebaseio.com",
+       projectId: "auth-62369",
+       storageBucket: "auth-62369.appspot.com",
+       messagingSenderId: "85060733264"
+     };
+     firebase.initializeApp(config);
+
+     var x = document.getElementById("myTxt").value;
+     document.getElementById("demo").innerHTML = x;
+     var ref = firebase.database().ref();
+     var coursesRef = ref.child('courses/course1');
+     var course = coursesRef.push();
+
+     console.log(course.key);
+     course.set({
+       message: x
+     });
+ }
+
+ var adaRef = firebase.database().ref('delete/message');
+adaRef.remove()
+  .then(function() {
+    console.log("Remove succeeded.")
+  })
+  .catch(function(error) {
+    console.log("Remove failed: " + error.message)
+  });
+
+</script>
+</body>
+</html>
