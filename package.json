@@ -14,6 +14,7 @@
     "express": "^4.13.4",
     "progressbar.js": "^1.0.1",
     "react": "^0.14.9",
+    "react-addons-create-fragment": "^15.6.0",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^0.14.9",
     "react-router": "^2.0.0"
