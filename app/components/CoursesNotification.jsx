@@ -27,9 +27,9 @@ render:function(){
 <div className="columns medium-8 large-centered small-4">
       <div className=" button-group">
       <a className="secondary button expanded " onClick={this.handleclick}>Course1</a>
-      <a className="success button" onClick={this.handleclick}>Course2</a>
-      <a className="warning button"onClick={this.handleclick}>Course3</a>
-      <a className="alert button"onClick={this.handleclick}>Course4</a>
+      <a className="success button expanded" onClick={this.handleclick}>Course2</a>
+      <a className="warning button expanded"onClick={this.handleclick}>Course3</a>
+      <a className="alert button expanded"onClick={this.handleclick}>Course4</a>
      </div>
    </div>
    </div>

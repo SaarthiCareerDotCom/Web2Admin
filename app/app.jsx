@@ -13,9 +13,9 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
     <Route path="coursesnotification" component={CoursesNotification}/>
+        <Route path="courses" component={Courses}/>
     </Route>
     <Route path="studentdashboard" component={StudentDashboard}/>
-    <Route path="courses" component={Courses}/>
   </Router>,
   document.getElementById('app')
 );

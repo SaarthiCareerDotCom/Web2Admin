@@ -1,0 +1,96 @@
+.sidebar {
+	width: 250px;
+	background:#171717;
+	float: left;
+}
+
+ul#nav{
+
+}
+
+ul#nav li {
+	list-style: none;
+}
+ul#nav li a {
+  color: #ccc;
+  display: block;
+  padding: 10px;
+  font-size: 0.8em;
+  border-bottom: 1px solid #444;
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+-ms-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+transition: all 0.2s ease;
+}
+
+ul#nav li a:hover {
+ background: #030303;
+ color: #fff;
+}
+
+ul#nav li a.selected{
+	background: #030303;
+	color:#fff;
+}
+
+@media only screen and (max-width: 480px) {
+
+a.mobile {
+	display: block;
+	color: #fff;
+	background: #000;
+	text-align: center;
+	padding: 7px;
+	cursor: pointer;
+}
+
+a.mobile:active{
+	background: #474747;
+}
+
+
+.sidebar {
+	width: 100%;
+	display: none;
+	height: auto;
+}
+
+.content {
+   margin-left: 0;
+}
+.submenu a {
+  background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+}
+
+
+
+@media only screen and (min-width: 480px) {
+
+.sidebar {
+	min-height: 900px;
+	display: block;
+}
+
+a.mobile {
+	display: none;
+}
+
+
+}
