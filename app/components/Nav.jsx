@@ -1,41 +1,33 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
-
 var Nav = React.createClass({
-  onSearch: function (e) {
-      e.preventDefault();
-      alert('Not yet wired up!');
-  },
   render: function () {
     return (
+  <div>
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">
-            <li className="menu-text">Admin</li>
-            <li>
-              <Link to="" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>DashBoard</Link>
-            </li>
+            <li className="menu-text">Admin Dashboard</li>
+          </ul>
+        </div>
+      </div>
+            <div className="sidebar">
+        <ul id="nav">
             <li>
               <Link to="/coursesnotification" activeClassName="active"  activeStyle={{fontWeight: 'bold'}}>Notifications</Link>
             </li>
             <li>
               <Link to="/courses" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Courses</Link>
             </li>
-          </ul>
-        </div>
-        <div className="top-bar-right">
-          {/*<form onSubmit={this.onSearch}>
-            <ul className="menu">
-              <li>
-                <input type="search" placeholder="Search weather"/>
-              </li>
-              <li>
-                <input type="submit" className="button" value="Get Weather"/>
-              </li>
+            {/*<li>
+              <Link to="/QAforum" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>QAforum</Link>
+            </li>*/}
+            <li onClick={this.handleClick}>
+              <Link to="/addcourse" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Add Course</Link>
+            </li>
             </ul>
-          </form>*/}
         </div>
-      </div>
+   </div>
     );
   }
 });

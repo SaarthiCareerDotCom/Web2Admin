@@ -28,8 +28,9 @@ module.exports = {
       StudentDashboard:'app/components/StudentDashboard.jsx',
       CoursesNotification:'app/components/CoursesNotification.jsx',
       Courses:'app/components/Courses.jsx',
-      SendMessage:'app/components/SendMessage.js',
-      ProgressBar:'app/components/ProgressBar.js',
+      AddCourse:'app/components/AddCourse.jsx',
+      DynamicField:'app/components/DynamicField.jsx',
+
     },
     extensions: ['', '.js', '.jsx']
   },
